@@ -18,5 +18,7 @@ TARGET_KERNEL_CONFIG := gki_defconfig
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_KERNEL_PATH)/dtbs
 
 # DTBO
+# LK authenticates this Nothing-signed image even when the bootloader is unlocked.
+# Preserve it when updating the kernel and modules.
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_KERNEL_PATH)/dtbo.img
 
